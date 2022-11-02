@@ -17,7 +17,7 @@ def generate_launch_description():
   robot_localization_file_path = os.path.join(pkg_share, 'config/ekf.yaml') 
   robot_name_in_urdf = 'basic_mobile_bot'
   default_rviz_config_path = os.path.join(pkg_share, 'rviz/nav2_config.rviz')
-  world_file_name = 'basic_mobile_bot_world/smalltown.world'
+  world_file_name = 'basic_mobile_bot_world/no_roof_small_warehouse.world'
   world_path = os.path.join(pkg_share, 'worlds', world_file_name)
   nav2_dir = FindPackageShare(package='nav2_bringup').find('nav2_bringup') 
   nav2_launch_dir = os.path.join(nav2_dir, 'launch')
@@ -100,7 +100,7 @@ def generate_launch_description():
  
   declare_slam_cmd = DeclareLaunchArgument(
     name='slam',
-    default_value='False',
+    default_value='True',
     description='Whether to run SLAM')
      
   declare_use_robot_state_pub_cmd = DeclareLaunchArgument(
